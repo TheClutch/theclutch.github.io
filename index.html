@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Hey, look, it's a blank page!</h1>
-<p>I'm used for testing.</p>
+<p id="norm">I'm used for testing.</p>
 <p class="bob">See? Hover over me for coolness!</p>
 
 <script>
@@ -18,9 +18,19 @@ function getRandomColor() {
     }
     return color;
 }
-$('.bob').mouseenter(function(){
+  
+  var bobS = document.getElementById( 'norm' );
+
+function css( element, property ) {
+    return window.getComputedStyle( element, null ).getPropertyValue( property );
+}
+var str = css( bobS, 'font-size' );
+var bob = str.substring(0, str.length - 2);
+  
+$('#norm').click(function(){
     $(".bob").css('color', getRandomColor());
-)};
+    $(".bob").css('font-size', Math.floor((Math.random() * 100) + bob));
+});
 </script>
 </body>
 </head>
