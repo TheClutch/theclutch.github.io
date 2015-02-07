@@ -6,14 +6,31 @@
 <link type="text/css" ref="stylesheet" src="css/main.css"></link>
 <title>Loading demo</title>
 </head>
-<body>
+<body onload="doneLoad()">
 <!-- Heyo from awesomebing1! I think I'll call this "libLoad". Nice name, riiiight? Yea? No? Ok.--->
 <script type="text/javascript">
-var debug = true;
-$.getScript( "js/external/boxfit.min.js" function (){
-$('.loading').boxfit();
+function doneLoad() {
+jQuery.cachedScript = function( url, options ) {
+
+    // Allow user to set any option except for dataType, cache, and url
+    options = $.extend( options || {}, {
+        dataType: "script",
+        cache: true,
+        url: url
+    });
+
+    // Use $.ajax() since it is more flexible than $.getScript
+    // Return the jqXHR object so we can chain callbacks
+    return jQuery.ajax( options );
+};
+
+// Usage
+$.cachedScript( "js/external/boxfit.min.js" ).done(function( script, textStatus ) {
+    console.log( "Done!" );
+	$('.loading').boxfit();
 begin();
 });
+}
 </script>
 <div class="loading">Please wait...</div>
 </body>

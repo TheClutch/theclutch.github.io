@@ -6,14 +6,12 @@
 <link type="text/css" ref="stylesheet" src="css/main.css"></link>
 <title>Loading demo</title>
 </head>
-<body>
+<body onload="doneLoad()">
 <!-- Heyo from awesomebing1! I think I'll call this "libLoad". Nice name, riiiight? Yea? No? Ok.--->
 <script type="text/javascript">
-var debug = true;
-$.getScript( "js/external/boxfit.min.js", function (){
-$('.loading').boxfit();
-begin();
-});
+function doneLoad() {
+ alert('hi');
+}
 </script>
 <div class="loading">Please wait...</div>
 </body>
