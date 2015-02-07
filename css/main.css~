@@ -1,3 +1,6 @@
 .loading {
 	font-size: 120%
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
 }
