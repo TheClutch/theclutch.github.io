@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Oi, it's a website!</title>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+<h1>Hey, look, it's a blank page!</h1>
+<p id="norm">I'm used for testing.</p>
+<p class="bob">Click the sentance above to change me.</p>
+
+<script>
+function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+  
+  var bobS = document.getElementById( 'norm' );
+
+function css( element, property ) {
+    return window.getComputedStyle( element, null ).getPropertyValue( property );
+}
+var str = css( bobS, 'font-size' );
+var bob = str.substring(0, str.length - 2);
+  alert('bob');
+$('#norm').click(function(){
+    var color = getRandomColor();
+    $('.bob').text('YAY! My color is ' + color + ', and my font size is ' + bob + '.');
+    $(".bob").css('color', color);
+    $(".bob").css('font-size', Math.floor((Math.random() * 100) + bob));
+});
+</script>
+</body>
+</head>
