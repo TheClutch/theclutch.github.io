@@ -32,10 +32,10 @@ function renderProgress(progress)
 
 function clearProgress()
 {
-  document.getElementByClassName('.animate-0-25-b').transform = "rotate(\"90deg\")";
-  document.getElementByClassName('.animate-25-50-b').transform = "rotate(\"90deg\")";
-  document.getElementByClassName('.animate-50-75-b').transform = "rotate(\"90deg\")";
-  document.getElementByClassName('.animate-75-100-b').transform = "rotate(\"90deg\")";
+  document.getElementsByName('.animate-0-25-b').transform = "rotate(\"90deg\")";
+  document.getElementsByName('.animate-25-50-b').transform = "rotate(\"90deg\")";
+  document.getElementsByName('.animate-50-75-b').transform = "rotate(\"90deg\")";
+  document.getElementsByName('.animate-75-100-b').transform = "rotate(\"90deg\")";
 }
 
 var i=0;
