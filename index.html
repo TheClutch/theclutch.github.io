@@ -2,15 +2,15 @@
 <html>
 <head>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="load.js"></script>
-<link type="text/css" ref="stylesheet" src="circle.css"></link>
+<script src="js/load.js"></script>
+<link type="text/css" ref="stylesheet" src="css/main.css"></link>
 <title>Loading demo</title>
 </head>
 <body>
 <!-- Heyo from awesomebing1! I think I'll call this "libLoad". Nice name, riiiight? Yea? No? Ok.--->
 <script type="text/javascript">
 var debug = true;
-$.getScript( "ajax/test.js" )
+$.getScript("js/external/boxfit.min.js" )
 if (debug = true ) {
 .done(function( script, textStatus ) {
 console.log( "Loaded main script, prepare for awesomeness!" );
