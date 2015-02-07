@@ -10,15 +10,10 @@
 <!-- Heyo from awesomebing1! I think I'll call this "libLoad". Nice name, riiiight? Yea? No? Ok.--->
 <script type="text/javascript">
 var debug = true;
-$.getScript("js/external/boxfit.min.js" )
-if (debug = true ) {
-.done(function( script, textStatus ) {
-console.log( "Loaded main script, prepare for awesomeness!" );
-})
-.fail(function( jqxhr, settings, exception ) {
-$( "div.log" ).text( "Triggered ajaxError handler." );
+$.getScript( "js/external/boxfit.min.js" function (){
+$('.loading').boxfit();
+begin();
 });
-}
 </script>
 <div class="loading">Please wait...</div>
 </body>
