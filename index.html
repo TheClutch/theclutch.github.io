@@ -6,9 +6,12 @@
 <script src="js/external/fittext.js"></script>
 <title>Loading demo</title>
 </head>
+<body onload="doneLoading();">
 <script type="text/javascript">
+function doneLoading() {
  alert('hi');
 window.fitText( document.getElementById("loading") );
+}
 </script>
 <div id="loading" class="loading">Please wait...</div>
 </body>
