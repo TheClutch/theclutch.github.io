@@ -5,12 +5,8 @@
 <link type="text/css" ref="stylesheet" src="css/main.css"></link>
 <title>Loading demo</title>
 </head>
-<body onload="doneLoad()">
-<!-- Heyo from awesomebing1! I think I'll call this "libLoad". Nice name, riiiight? Yea? No? Ok.--->
 <script type="text/javascript">
-function doneLoad() {
  alert('hi');
-}
 </script>
 <div class="loading">Please wait...</div>
 </body>
