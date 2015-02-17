@@ -2,8 +2,20 @@ function setName(name) {
   $('.title').html = name;
 }
 function beginShow() {
-setInterval(setName('ClutchNightmare'), 3000);
-setInterval(setName("- and -"), 3000);
-setInterval(setName('awesomebing1'), 3000);
-$(".avatar").attr('src', 'https://minotar.net/avatar/awesomebing1.png');
+function one() {
+  setName('ClutchNightmare');
+  setInterval(two, 3000);
+}
+function two() {
+  setName("- and -");
+  setInterval(three, 3000);
+}
+function three() {
+  setName("awesomebing1");
+  $(".avatar").attr('src', 'https://minotar.net/avatar/awesomebing1.png');
+  setInterval(taDa, 3000);
+}
+function taDa() {
+  
+}
 }
