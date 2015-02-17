@@ -1,7 +1,6 @@
 function setName(name) {
   $('.title').html = name;
 }
-function beginShow() {
 function one() {
   setName('ClutchNightmare');
   setInterval(two, 3000);
@@ -17,5 +16,4 @@ function three() {
 }
 function taDa() {
   
-}
 }
