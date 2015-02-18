@@ -1,16 +1,13 @@
-function setName(name) {
-  $('.title').html = name;
-}
 function one() {
-  setName('ClutchNightmare');
+  $('.title').text('ClutchNightmare');
   setInterval(two, 3000);
 }
 function two() {
-  setName("- and -");
+  $('.title').text("- and -");
   setInterval(three, 3000);
 }
 function three() {
-  setName("awesomebing1");
+  $('.title').text("awesomebing1");
   $(".avatar").attr('src', 'https://minotar.net/avatar/awesomebing1.png');
   setInterval(taDa, 3000);
 }
