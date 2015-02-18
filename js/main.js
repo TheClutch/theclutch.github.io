@@ -5,19 +5,17 @@ function one() {
         $('.title').text("- and -");
       setTimeout(function() {
         $('.title').text("awesomebing1");
-  $(".avatar").attr('src', 'https://minotar.net/avatar/awesomebing1.png');
+  changeImage('https://minotar.net/avatar/awesomebing1.png');
+  setTimeout(function() {
+    taDa();
+      }, 3000);
 }, 3000);
 }, 3000);
 }, 3000);
 }
-function two() {
-  
-  setInterval(three, 3000);
-}
-function three() {
-
-  setInterval(taDa, 3000);
-}
+function changeImage(a) {
+        document.getElementById("swag").src=a;
+    }
 function taDa() {
   
 }
